@@ -1,12 +1,13 @@
 <template>
-  <Main/>
+    <div>
+        <h1>Cargo</h1>
+    </div>
 </template>
 
-<script lang="ts">
+<script>
 import {defineComponent} from "vue";
-import Main from "./pages/Main.vue";
 export default defineComponent({
-    components: {Main}
+
 })
 </script>
 
