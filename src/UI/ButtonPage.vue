@@ -14,7 +14,7 @@ import {defineComponent} from "vue";
 import {PropType} from "vue";
 import {filter} from "../types/filter.ts";
 interface State{
-    filter: filter[]
+    filter: filter[],
 }
 export default defineComponent({
     props: {
