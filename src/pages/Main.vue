@@ -4,6 +4,10 @@
         <div>
             <ButtonPage  :active-button="activeButton" @set-page="setPage"/>
         </div>
+        <Tanks :active-button="activeButton" />
+        <Cargo :active-button="activeButton"/>
+        <Stocks :active-button="activeButton" />
+
     </div>
 </template>
 

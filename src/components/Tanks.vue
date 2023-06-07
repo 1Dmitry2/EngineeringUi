@@ -1,16 +1,36 @@
 <template>
-    <div>
-        <h1>Цистерны</h1>
+    <div
+      :class="{'disabled': activeButton !== 'Цистерны'}">
+        Цистерны
     </div>
 </template>
 
-<script>
+<script lang="ts">
 import {defineComponent} from "vue";
+import {PropType} from "vue";
+import {filter} from "../types/filter.ts";
+interface State{
+    filter: filter[],
+}
 export default defineComponent({
-
+    props: {
+        activeButton:{
+            type: String as PropType<filter>,
+            required:true
+        }
+    },
+    data():State{
+        return {
+            filter:['Цистерны','Грузы','Запасы']
+        }
+    },
 })
 </script>
 
 <style lang="scss" scoped>
+
+.disabled {
+    display: none;
+}
 
 </style>
